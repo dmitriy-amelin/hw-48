@@ -18,7 +18,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Ктагория: {{ product.get_category_display }}</h5>
                     <p class="card-text">Цена: {{ product.price }} сом</p>
-                <a href="#" class="btn btn-primary">Просмотр товара</a>
+                <a href="{% url "product-view" product.id %}" class="btn btn-primary">Просмотр товара</a>
                 </div>
             </div>
         </div>
