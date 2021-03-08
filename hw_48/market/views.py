@@ -18,3 +18,16 @@ def product_add(request):
     if request.method == 'GET':
         form = ProductForm()
         return render(request, 'product_add.html', context={'form': form, 'choices': category_choices})
+    elif request.method == 'POST':
+        form = ProductForm(data=request.POST)
+        if form.is_valid():
+            product = Product.objects.create(
+                name=form.cleaned_data.get('name'),
+                description=form.cleaned_data.get('description'),
+                category=form.cleaned_data.get('category'),
+                balance=form.cleaned_data.get('balance'),
+                price=form.cleaned_data.get('price')
+            )
+            return redirect('product-view', pk=product.id)
+        return render(request, 'product_add.html', context={'form': form, 'choices': category_choices})
+
