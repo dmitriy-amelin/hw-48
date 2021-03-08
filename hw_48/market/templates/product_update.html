@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Изменение товара{% endblock title %}
+
+{% block content %}
+    <form action="{% url "product-update" product.id %}" method="post">
+            <h3>Внесите изменение в товар</h3>
+        {% include 'product_form.html' with button_text="Изменить" %}
+    </form>
+
+{% endblock content %}

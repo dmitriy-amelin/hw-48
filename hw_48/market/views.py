@@ -31,3 +31,28 @@ def product_add(request):
             return redirect('product-view', pk=product.id)
         return render(request, 'product_add.html', context={'form': form, 'choices': category_choices})
 
+
+def product_update(request, pk):
+    product = get_object_or_404(Product, id=pk)
+
+    if request.method == 'GET':
+        form = ProductForm(initial={
+            'name': product.name,
+            'description': product.description,
+            'category': product.category,
+            'balance': product.balance,
+            'price': product.price
+        })
+        return render(request, 'product_update.html', context={'form': form, 'product': product})
+    elif request.method == 'POST':
+        form = ProductForm(data=request.POST)
+        if form.is_valid():
+            product.name = request.POST.get("name")
+            product.description = request.POST.get("description")
+            product.category = request.POST.get("category")
+            product.balance = request.POST.get("balance")
+            product.price = request.POST.get("price")
+            product.save()
+            return redirect('product-view', pk=product.id)
+
+        return render(request, 'product_update.html', context={'form': form, 'product': product})
