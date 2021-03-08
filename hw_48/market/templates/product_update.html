@@ -6,6 +6,7 @@
     <form action="{% url "product-update" product.id %}" method="post">
             <h3>Внесите изменение в товар</h3>
         {% include 'product_form.html' with button_text="Изменить" %}
+            <a class="btn btn-danger" role="button" href="{% url "product-view" product.id %}">Отменить изменения</a>
     </form>
 
 {% endblock content %}
