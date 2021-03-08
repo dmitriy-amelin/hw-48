@@ -3,8 +3,8 @@
   "model": "market.product",
   "pk": 1,
   "fields": {
-    "name": "вЂ™СЂРёР·Р°РЅС‚РµРјС‹",
-    "description": "В»СЃРєСѓСЃСЃС‚РІРµРЅРЅС‹Рµ С…СЂРёР·Р°РЅС‚РµРјС‹",
+    "name": "Хризантемы",
+    "description": "Искусственные хризантемы",
     "category": "flowers ",
     "balance": 10,
     "price": "150.50"
@@ -14,8 +14,8 @@
   "model": "market.product",
   "pk": 2,
   "fields": {
-    "name": "СњСЂС‚РѕРїРµРґРёС‡РµСЃРєРёРµ СЃС‚РµР»СЊРєРё",
-    "description": "вЂ”С‚РµР»СЊРєРё РјРµРґРёС†РёРЅСЃРєРёРµ РѕСЂС‚РѕРїРµРґРёС‡РµСЃРєРёРµ",
+    "name": "Ортопедические стельки",
+    "description": "Стельки медицинские ортопедические",
     "category": "other",
     "balance": 5,
     "price": "200.00"
@@ -25,8 +25,8 @@
   "model": "market.product",
   "pk": 3,
   "fields": {
-    "name": "С•Р»СЋС€РµРІС‹Р№ РјРёС€РєР°",
-    "description": "В»РіСЂСѓС€РєР° \"С•Р»СЋС€РµРІС‹Р№ РјРёС€РєР°\" СЂР°СЃСЃС‡РёС‚Р°РЅ РЅР° РІРѕР·СЂР°СЃС‚ РѕС‚ 3 РґРѕ 10 Р»РµС‚",
+    "name": "Плюшевый мишка",
+    "description": "Игрушка \"Плюшевый мишка\" рассчитан на возраст от 3 до 10 лет",
     "category": "toys",
     "balance": 3,
     "price": "350.45"
@@ -36,8 +36,8 @@
   "model": "market.product",
   "pk": 4,
   "fields": {
-    "name": "вЂћР°Р№РЅС‹Р№ РЅР°Р±РѕСЂ",
-    "description": "вЂћР°Р№РЅС‹Р№ РЅР°Р±РѕСЂ РёР· 6 РїСЂРµРґРјРµС‚РѕРІ. : С‡Р°С€РµРє Рё 6 Р±Р»СЋРґРµС†",
+    "name": "Чайный набор",
+    "description": "Чайный набор из 6 предметов. : чашек и 6 блюдец",
     "category": "dishes",
     "balance": 15,
     "price": "600.30"
@@ -47,29 +47,44 @@
   "model": "market.product",
   "pk": 5,
   "fields": {
-    "name": "В СѓС…РѕРЅРЅС‹Р№ РЅРѕР¶",
-    "description": "В СѓС…РѕРЅРЅС‹Р№ РЅРѕР¶ РїРѕРєСЂС‹С‚С‹Р№ РєРµСЂР°РјРёС‡РµСЃРєРёРј СЃРѕСЃС‚Р°РІРѕРј",
+    "name": "Кухонный нож",
+    "description": "Кухонный нож покрытый керамическим составом",
     "category": "other",
     "balance": 50,
     "price": "150.00"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 1,
+  "model": "market.product",
+  "pk": 6,
   "fields": {
-    "password": "pbkdf2_sha256$216000$0hlRpHUV9zCf$nr4LRjizFrsIaCO2BrgYZ2vswpunvE5RpLmeUFC29EQ=",
-    "last_login": "2021-03-08T13:00:43.093Z",
-    "is_superuser": true,
-    "username": "admin",
-    "first_name": "",
-    "last_name": "",
-    "email": "admin@admin.com",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2021-03-08T07:08:48.218Z",
-    "groups": [],
-    "user_permissions": []
+    "name": "Пиала",
+    "description": "Чайная пиала из китайского фарфора",
+    "category": "dishes",
+    "balance": 0,
+    "price": "50.65"
+  }
+},
+{
+  "model": "market.product",
+  "pk": 7,
+  "fields": {
+    "name": "Тарелка",
+    "description": "Глубокая тарелка для салатов",
+    "category": "dishes",
+    "balance": 2,
+    "price": "85.25"
+  }
+},
+{
+  "model": "market.product",
+  "pk": 8,
+  "fields": {
+    "name": "Тюльпаны",
+    "description": "Искусственные тюльпаны",
+    "category": "flowers ",
+    "balance": 100,
+    "price": "100.50"
   }
 }
 ]
