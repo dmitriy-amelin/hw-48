@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Добавление товара{% endblock title %}
+
+{% block content %}
+
+    <form action="{% url "product-add" %}" method="post">
+            <h3>Добавьте товар</h3>
+        {% include 'product_form.html' with button_text="Добавить" %}
+    </form>
+
+{% endblock content %}
