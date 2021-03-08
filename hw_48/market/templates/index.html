@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Список товаров{% endblock title %}
+
+{% block content %}
+
+{% if not products %}
+    <h2>ТОВАРОВ НЕТ</h2>
+{% endif %}
+
+<div class="row mt-4">
+    {% for product in products %}
+        <div class="col-sm-12 col-lg-4 mb-4">
+            <div class="card">
+                <h5 class="card-header">
+                    {{ product.name }}
+                </h5>
+                <div class="card-body">
+                    <h5 class="card-title">Ктагория: {{ product.get_category_display }}</h5>
+                    <p class="card-text">Цена: {{ product.price }} сом</p>
+                <a href="#" class="btn btn-primary">Просмотр товара</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}
