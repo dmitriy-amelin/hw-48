@@ -1,0 +1,75 @@
+[
+{
+  "model": "market.product",
+  "pk": 1,
+  "fields": {
+    "name": "’ризантемы",
+    "description": "»скусственные хризантемы",
+    "category": "flowers ",
+    "balance": 10,
+    "price": "150.50"
+  }
+},
+{
+  "model": "market.product",
+  "pk": 2,
+  "fields": {
+    "name": "ќртопедические стельки",
+    "description": "—тельки медицинские ортопедические",
+    "category": "other",
+    "balance": 5,
+    "price": "200.00"
+  }
+},
+{
+  "model": "market.product",
+  "pk": 3,
+  "fields": {
+    "name": "ѕлюшевый мишка",
+    "description": "»грушка \"ѕлюшевый мишка\" рассчитан на возраст от 3 до 10 лет",
+    "category": "toys",
+    "balance": 3,
+    "price": "350.45"
+  }
+},
+{
+  "model": "market.product",
+  "pk": 4,
+  "fields": {
+    "name": "„айный набор",
+    "description": "„айный набор из 6 предметов. : чашек и 6 блюдец",
+    "category": "dishes",
+    "balance": 15,
+    "price": "600.30"
+  }
+},
+{
+  "model": "market.product",
+  "pk": 5,
+  "fields": {
+    "name": " ухонный нож",
+    "description": " ухонный нож покрытый керамическим составом",
+    "category": "other",
+    "balance": 50,
+    "price": "150.00"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$0hlRpHUV9zCf$nr4LRjizFrsIaCO2BrgYZ2vswpunvE5RpLmeUFC29EQ=",
+    "last_login": "2021-03-08T13:00:43.093Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@admin.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-03-08T07:08:48.218Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
