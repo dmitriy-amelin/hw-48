@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Удаление товара{% endblock %}
+    <h2>Вы уверены, что хотите удалить товар?</h2>
+
+{% block content%}
+    <form action="{% url "product-delete" product.id %}", method="POST">
+         {% include 'product_form.html' with button_text="Да, я хочу удалить товар" %}
+
+        <a class="btn btn-danger" role="button" href="{% url "product-view" product.id %}">Нет, я передумал.</a>
+    </form>
+{% endblock content %}

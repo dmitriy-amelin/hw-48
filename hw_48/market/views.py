@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from market.forms import ProductForm
+from market.forms import ProductForm, ProductDeleteForm
 from market.models import Product, category_choices
 
 
@@ -56,3 +56,20 @@ def product_update(request, pk):
             return redirect('product-view', pk=product.id)
 
         return render(request, 'product_update.html', context={'form': form, 'product': product})
+
+
+def product_delete(request, pk):
+    product = get_object_or_404(Product, id=pk)
+
+    if request.method == 'GET':
+        form = ProductDeleteForm()
+        return render(request, 'product-delete.html', context={'product': product, 'form': form})
+    elif request.method == 'POST':
+        form = ProductDeleteForm(data=request.POST)
+        if form.is_valid():
+            if form.cleaned_data['name'] != product.name:
+                form.errors['name'] = ['Название товара не совпадает']
+                return render(request, 'product-delete.html', context={'product': product, 'form': form})
+            product.delete()
+            return redirect('product-list')
+        return render(request, 'product-delete.html', context={'product': product, 'form': form})
